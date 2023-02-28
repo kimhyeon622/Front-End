@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.07">
+    <meta name="description" content="리스트를 사용하여 메뉴를 만들어보자">
+    
+    <style>
+        li{
+            background-color: lightpink;
+            color: aqua;
+            width: 120px;
+            height: 40px;
+
+            line-height: 40px;
+            /* 세로 가운데 정렬 : height의 값과 동일하게 설정 */
+
+            text-align: center;
+            /* 가로 가운데 정렬 : center로 지정 */
+
+            font-weight: bold;      /* 글자 굵기 */
+            font-size: 15px;        /* 글자 크기 */
+            border-radius: 5px;     /* 모서리의 각진 부분을 둥글게 함 */
+            display: inline-block;  /* 한줄 정렬 + 리스트 모양이 사라짐 */
+        }
+
+        /* li(리스트)에 마우스를 올렸을 떄 */
+        li:hover{
+            background-color: hotpink;
+            color: azure;
+            font-size: 20px;
+        }
+    </style>
+
+    <title>리스트 메뉴</title>
+
+</head>
+<body>
+    <ul>
+        <a href="http://www.naver.com"><li>Naver</li></a>
+        <a href="http://www.google.com"><li>Google</li></a>
+        <a href="http://www.daum.net"><li>Daum</li></a>
+        <a href="http://www.youtube.com"><li>Youtube</li></a>
+        
+    </ul>
+</body>
+</html>

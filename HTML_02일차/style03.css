@@ -1,0 +1,37 @@
+/*style03.css*/
+
+body {
+    background-color: black;
+    color: salmon;
+}
+
+h1 {
+    font-size: 10px;
+    color: yellow;
+    border: inset 2px violet;
+}
+
+h2 {
+    border: dotted 5px violet;
+}
+
+h3 {
+    border: dashed 2px violet;
+}
+
+h4 {
+    border: double 2px violet;
+}
+
+h5 {
+    border: groove 2px violet;
+}
+
+h6 {
+    border: ridge 2px violet;
+}
+
+p {
+    color: red;
+    border: solid 2px orange;
+}

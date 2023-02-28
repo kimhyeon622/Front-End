@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.19">
+    <meta name="description" content="조건문예제">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>조건문예제(큰수 구하기)</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Q. 세개의 숫자를 입력받아서 그중 가장 큰 수를 구하시오.
+    // 문자를 숫자로 변환하는 방법 Number()
+
+    // 첫번쨰 방법
+    // let A = prompt('첫번쨰 숫자를 입력하시오');
+    // let B = prompt('두번쨰 숫자를 입력하시오');
+    // let C = prompt('세번쨰 숫자를 입력하시오');
+    // let max;
+
+    // if(A >= B){
+    //     if(A >= C ){
+    //     max=A;
+    // } 
+    // } 
+    // else {
+    // }if(B >= C){
+    //     max=B;
+    // }else{
+    //     max=C;
+    // }
+    // alert("가장 큰 수는 "+max+"입니다.")
+
+
+    // 두번쨰
+    let A = Number(prompt('첫번쨰 숫자를 입력하시오'));
+    let B = Number(prompt('두번쨰 숫자를 입력하시오'));
+    let C = Number(prompt('세번쨰 숫자를 입력하시오'));
+    if(A>B && A>C){
+        max = A;
+    } else if(B>C){
+        max = B;
+    } else {
+        max = C;
+    }
+    alert("가장 큰 수는 "+max+"입니다.")
+</script>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.22">
+    <meta name="description" content="객체">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    //객체(object) : 다른 것과 식별이 가능한 것
+    // 자신만의 고유한 특성과 행동을 가지고, 다른 객체들과 상호작용하는 것
+
+    // 배열선언방법 2갖
+    // let arr1 = [];
+    // let arr2 new Array();
+
+    // 객체선언방법 2가지
+    // let obj1 = {};
+    // let obj2 = new Objext();
+
+    let obj1 = {};
+    let obj2 = new Object();
+
+    console.log("obj1타입 : " + typeof(obj1))
+    console.log("obj2타입 : " + typeof(obj2))
+    console.log("obj1배열확인 : " + Array.isArray(obj1))
+    console.log("obj2배열확인 : " + Array.isArray(obj2))
+
+    // 키(key) : 값(value)으로 이루어져 있다.
+
+    let car = {
+        company : "Hyundai",
+        name : "Sonata",
+        type : "Diesel",
+        color : "Gray"
+    };
+
+    console.log(car);
+
+    car.name = "Santafe";       // 기존에 있던 키 : 덮어쓰기
+    car.num = "321두1234";      // 객체에 없던 키 : 추가하기
+    
+    console.log(car)
+
+    /////////////////////////////////////////////////////////////////////////
+
+    let person = new Object();
+
+    person["name"] = " 김현";
+    person["age"] = 21;
+    person["phone"] = "010-1234-5678"
+
+    person.addr = "경기도 안양시 안양2동";
+
+    console.log(person);
+
+    ////////////////////////////////////////////////////////////////////
+
+    for(let i in car){
+        document.write("i : "+ i + " | car["+i+"] : "+car[i]+"<br/>");
+    }
+    document.write("<br/>")
+    for(let i in person){
+        document.write("i : "+ i + " | person["+i+"] : "+person[i]+"<br/>");
+    }
+
+</script>
+</html>

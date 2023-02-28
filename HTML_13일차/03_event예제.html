@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="event종류에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>addEventListner예제</title>
+</head>
+<body>
+    <div id="box"></div>
+</body>
+
+<script>
+    let box = document.getElementById("box");
+
+    box.addEventListener("click", clicK);
+    box.addEventListener("dblclick", dblclicK);
+    box.addEventListener("mouseenter", mouseenteR);
+    box.addEventListener("mouseout", mouseouT);
+    box.addEventListener("contextmenu", function(ev){
+        ev.preventDefault();
+        alert('오른쪽 마우스 사용금지!');
+        return false;
+    }, false)
+
+    function clicK(){
+        box.innerHTML = "Click!";
+        box.style.backgroundColor = "orange"
+        box.style.color = "red";
+    }
+
+    function dblclicK(){
+        box.innerHTML = "dblClick!";
+        box.style.backgroundColor = "red"
+        box.style.color = "orange";
+    }
+
+    function mouseenteR(){
+        box.innerHTML = "mouseenteR!";
+        box.style.backgroundColor = "blue"
+        box.style.color = "white";
+    }
+
+    function mouseouT(){
+        box.innerHTML = "mouseouT!";
+        box.style.backgroundColor = "black"
+        box.style.color = "white";
+    }
+
+    function rightmousE(){
+        box.style.backgroundColor = "lightpink"
+        box.style.color = "hotpink";
+        alert('오른쪽 마우스 사용금지!');
+    }
+</script>
+</html>

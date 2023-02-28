@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.20">
+    <meta name="description" content="함수(function)에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>함수(Function)</title>
+</head>
+<body>
+    <h2>함수 : 작업을 수행하거나 값을 계시하는 문장 집합</h2>
+    <input type="button" value="더하기" onclick="sum()" />
+    <input type="button" value="빼기"   onclick="minus(7,3)" />
+    <input type="button" value="곱하기" onclick="multi()" />
+    <input type="button" value="나누기" onclick="divide()" />
+    <br/><hr/>
+    <div id="result">결과값</div>
+</body>
+
+<script>
+    // java에서 method 생성시
+    // 데이터타입 method명(){ return 데이터타입변수;}
+
+    // JavaScript에서 함수는 return값을 사용해도 되고, 생략해도 된다.
+    function sum() {
+        document.getElementById("result").innerHTML="a + b = "+(a+b);
+    }
+
+    // 매개변수를 활용한 함수 생성
+    function minus(c,d) {
+        document.getElementById("result").innerHTML="c - d = "+(c - d);
+    }
+
+    function multi() {
+        document.getElementById("result").innerHTML="a x b = "+(a * b);
+    }
+
+    function divide() {
+        document.getElementById("result").innerHTML="a / b = "+(a / b);
+    }
+
+    let a = 3;
+    let b = 4;
+
+    console.log(a);
+    console.log(b);
+    // console.log(c);
+    // console.log(d);
+
+    // c와 d는 minus(c,d) 함수에서만 정의된 변수이므로 해당 함수에서만 사용할 수 있다.
+
+</script>
+</html>

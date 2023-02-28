@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.06">
+    <meta name="description" content="텓스트를 새로 생성하거나 사진을 변경한다">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>사진 변경하기</title>
+</head>
+<body>
+    <button id="btn1">이미지 변경</button>
+    <button id="btn2">텍스트 표시</button> <br/><hr/>
+
+    <img id="image" src="../image/A.jpg" alt="사진" width="400px">
+    <h1 id="txt"></h1>
+</body>
+
+<script>
+    let btn1 = document.getElementById("btn1");
+    let btn2 = document.getElementById("btn2");
+    let image = document.getElementById("image");
+    let txt = document.getElementById("txt");
+
+    let t = 0;
+    let i = 0;
+
+    btn2.addEventListener("click", function(){
+        if(t==0){
+            txt.innerHTML="새로운 텍스트 등장!"
+            t++
+        } else {
+            txt.innerHTML = "";
+            t = 0;
+        }
+    });
+
+    btn1.addEventListener("click", function(){
+        if(i==0){
+            image.setAttribute("src", "../image/b.jpg")
+            i++
+        } else {
+            image.setAttribute("src", "../image/A.jpg")
+            i = 0;
+        }
+    });
+
+    image.addEventListener("click", function(){
+        console.log(i);
+        if(i==0){
+            image.setAttribute("src", "../image/b.jpg")
+            i++
+        } else if (i==1) {
+          image.setAttribute("src", " ");
+          image.removeAttribute("alt")
+          i++
+        }else {
+            image.setAttribute("src", "../image/A.jpg")
+            i = 0;
+        }
+    });
+</script>
+</html> 

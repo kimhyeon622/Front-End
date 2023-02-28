@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.13">
+    <meta name="description" content="행과 열병합 동시에 사용하기">
+    
+    <link rel="stylesheet" href="table.css">
+
+    <title>행, 열병합</title>
+
+</head>
+<body>
+    <!-- 5x5 테이블 생성 -->
+    <!-- table.css를 만들어서 적용 -->
+    <table>
+        <tr>
+            <td rowspan="2" colspan="2">1, 1</td>
+            <td>1, 3</td>
+            <td>1, 4</td>
+            <td>1, 5</td>
+        </tr>
+        <tr>
+            <td>2, 3</td>
+            <td>2, 4</td>
+            <td>2, 5</td>
+        </tr>
+        <tr>
+            <td>3, 1</td>
+            <td>3, 2</td>
+            <td rowspan="3" colspan="3">3, 3</td>
+        </tr>
+        <tr>
+            <td>4, 1</td>
+            <td>4, 2</td>
+        </tr>
+        <tr>
+            <td>5, 1</td>
+            <td>5, 2</td>
+        </tr>
+    </table>
+
+</body>
+</html>

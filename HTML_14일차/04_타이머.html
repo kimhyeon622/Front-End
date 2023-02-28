@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+    <style>
+        b {
+            font-size: 50px;
+        }
+    
+        .size {
+            height: 50px;
+            text-align: center;
+            width: 80px;
+        }
+    
+        fieldset {
+            width: 500px;
+        }
+    
+        .si {
+            width: 78px;
+        }
+    
+        .si:hover{
+            font-weight: bold;
+        }
+    
+        .si:hover > span{
+            font-weight: bold;
+            color: green;
+        }
+    
+        #st{
+            background-color: green;
+        }
+    
+        #re{
+            background-color: gray;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <fieldset>
+        <div>
+            &nbsp;
+            <b id="h">00</b>시간
+            <b id="m">00</b>분
+            <b id="s">00</b>초
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="size" onclick="" id="st">START</button>
+            <button class="size" onclick="" id="re">Reset</button>
+        </div>
+        <hr>
+        <div>
+            <button class="si" onclick="" id="ts"><span>&oplus;</span>10초</button>
+            <button class="si" onclick="" id="mi"><span>&oplus;</span>1분</button>
+            <button class="si" onclick="" id="fm"><span>&oplus;</span>5분</button>
+            <button class="si" onclick="" id="tm"><span>&oplus;</span>10분</button>
+            <button class="si" onclick="" id="ttm"><span>&oplus;</span>30분</button>
+            <button class="si" onclick="" id="oh"><span>&oplus;</span>1시간</button>
+        </div>
+    </fieldset>
+</body>
+
+<script>
+    let s = document.getElementById("s")
+    let m = document.getElementById("m")
+    let h = document.getElementById("h")
+
+    let st = document.getElementById("st")
+    let re = document.getElementById("re")
+
+    let ts = document.getElementById("ts")
+    let mi = document.getElementById("mi")
+    let fm = document.getElementById("fm")
+    let tm = document.getElementById("tm")
+    let ttm = document.getElementById("ttm")
+    let oh = document.getElementById("oh")
+
+    let myTime;
+    let hh = 0;
+    let mm = 0;
+    let ss = 0;
+
+    st.addEventListener("click", function () {
+        clearInterval(myTime);
+        if (hh==00 && mm==00 && ss==00) {
+            clearInterval(myTime);
+            alert("타이머를 설정해주세요");
+            
+        }
+        myTime = setInterval(function () {
+
+            if (mm > 0) {
+                if (ss <= 0) {
+                    mm--;
+                    ss = 60;
+                    mtime();
+                    stime();
+                }
+            }
+
+            if (hh > 0) {
+                if (mm <= 0) {
+                    hh--;
+                    mm = 60;
+                    htime();
+                    mm--
+                    ss = 60
+                    mtime();
+                    stime();
+                }
+            }
+
+            ss--;
+            stime();
+
+
+            if (hh==00 && mm==00 && ss==00) {
+                clearInterval(myTime);
+                alert("설정하신 타이머가 종료되었습니다") 
+            }
+            
+        }, 1000);
+
+    });
+
+    re.addEventListener("click", function () {
+        clearInterval(myTime);
+        ss = 0;
+        s.innerHTML = "0" + ss;
+        mm = 0;
+        m.innerHTML = "0" + mm;
+        hh = 0;
+        h.innerHTML = "0" + hh;
+    });
+
+    ts.addEventListener("click", function () {
+        ss += 10;
+        sif();
+    });
+
+    mi.addEventListener("click", function () {
+        mm += 1;
+        mtime();
+        if (mm>60) {
+            mif();
+        }
+    });
+
+    fm.addEventListener("click", function () {
+        mm += 5;
+        mtime();
+        if (mm>60) {
+            mif();
+        }
+    });
+
+    tm.addEventListener("click", function () {
+        mm += 10;
+        mif();
+    });
+
+    ttm.addEventListener("click", function () {
+        mm += 30;
+        mif();
+    });
+
+    oh.addEventListener("click", function () {
+        hh += 1;
+        htime()
+    });
+
+    function stime() {
+        if (ss < 10) {
+            s.innerHTML = "0" + ss;
+        } else {
+            s.innerHTML = ss;
+        }
+    }
+
+    function mtime() {
+        if (mm < 10) {
+            m.innerHTML = "0" + mm;
+        } else {
+            m.innerHTML = mm;
+        }
+    }
+
+    function htime() {
+        if (hh < 10) {
+            h.innerHTML = "0" + hh;
+        } else {
+            h.innerHTML = hh;
+        }
+    }
+
+    function sif() {
+        if (ss >= 60) {
+            ss = ss - 60
+            stime();
+            mm++
+            mtime();
+        } else {
+            s.innerHTML = ss;
+        }
+    }
+
+    function mif() {
+        if (mm >= 60) {
+            mm = mm - 60
+            mtime();
+            hh++
+            htime();
+            
+        } else {
+            m.innerHTML = mm;
+        }
+    }
+
+
+</script>
+
+</html>

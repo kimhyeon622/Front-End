@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.13">
+    <meta name="description" content="table과 fieldset을 사용한 로그인창 만들기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="table.css">
+    
+    <title>로그인 페이지</title>
+</head>
+<body>
+    <!-- form : 데이터를 다른페이지로 이동하기 위한 태그 -->
+    <!-- action : 이동할 페이지 주소 -->
+    <!-- method : 데이터를 전송할 방식 (GET / POST) -->
+    <!-- get방식 : 주소창에 데이터를 출력 -->
+    <!-- post방식 : 정보를 이동하기는 하지만 출력하지는 않는다(보안) -->
+    <form action="http://www.naver.com" method="post">
+        <table>
+            <caption>네이버 로그인</caption>
+            <!-- 1행 -->
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" name="userId" placeholder="아이디 입력"/></td>
+            </tr>
+            <!-- 2행 -->
+            <tr>
+                <th>패스워드</th>
+                <td><input type="password" name="userPw" placeholder="패스워드 입력"/></td>
+            </tr>
+            <!-- 3행 -->
+            <tr>
+                <th colspan="2"><input type="submit" value="login" /></th>
+            </tr>
+        </table>
+    </form>
+    <br/>
+<hr/>
+<br/>
+    <!-- 구글 사이트 로그인을 할떄 정보가 가려지도록 로그인창을 만드시오 -->
+    <fieldset>
+    <form action="https://www.google.com/" method="get">
+        <table>
+            <legend>구글 로그인</legend>
+            <!-- 1행 -->
+            <tr>
+                <th>아이디</th>
+                <td><input type="text" placeholder="아이디 입력"/></td>
+            </tr>
+            <!-- 2행 -->
+            <tr>
+                <th>패스워드</th>
+                <td><input type="password" placeholder="패스워드 입력"/></td>
+            </tr>
+            <!-- 3행 -->
+            <tr>
+                <th colspan="2"><input type="submit" value="login" /></th>
+            </tr>
+        </table>
+    </form>
+</fieldset>
+</body>
+</html>

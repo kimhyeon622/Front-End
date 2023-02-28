@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.19">
+    <meta name="description" content="중첩for문">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>중첩for문x구구단</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 중첩for문 : for문 안에 for문 작성
+
+    /*
+        for( 초기식; 조건식; 증감식){
+
+        
+            for( 초기식; 조건식; 증감식){
+
+                실행문;
+            }
+        }
+    */
+
+   // 중첩for문을 이용해서 구구단 2단부터 9단까지
+   // document.write()로 출력
+   // 단이 시작할 떄 n단 표시
+   // 단이 끝날떄 한줄 띄어 쓰기
+
+    for (let i = 2; i <= 9; i++) {
+        document.write("구구단 "+i+"단<br/>");
+        for (let j = 1; j < 9; j++) {
+            document.write(i+"x"+j+"="+(i*j)+"<br/>");
+    }
+    document.write("<br/>");
+   }
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.08">
+    <meta name="description" content="테이블 생성하고 스트일 적용하기">
+    
+    <style>
+        table, tr, td, th{
+            border : 1px solid;
+            border-collapse: collapse;
+            /* 테이블의 선을 합친다. */
+        }
+
+        td, tr{
+            width: 150px;
+            padding: 10px;
+        }
+    </style>
+    
+    <title>테이블 태그</title>
+</head>
+<body>
+    <p>table(표)</p>
+    <p>tr(행) : table row - 가로줄 만들기</p>
+    <p>td(열) : table data - 셀 만들기</p>
+    <p>th(제목) : table haed - 굵은 글씨체 + 가운데 정렬</p>
+
+    <table>
+        <!-- 3행 -->
+       <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+        </tr> 
+        <!-- 1행 -->
+        <tr>
+            <td>1행1열</td>
+            <td>1행2열</td>
+            <td>1행3열</td>
+        </tr>
+
+        <!-- 2행 -->
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr>
+
+    </table>
+
+    <hr/>
+
+    <table>
+        <!-- 1행 -->
+        <tr>
+            <th>1행1열</th>
+            <th>1행2열</th>
+            <th>1행3열</th>
+        </tr>
+
+        <!-- 2행 -->
+        <tr>
+            <td>2행1열</td>
+            <td>2행2열</td>
+            <td>2행3열</td>
+        </tr> 
+        
+        <!-- 3행 -->
+       <tr>
+            <td>3행1열</td>
+            <td>3행2열</td>
+            <td>3행3열</td>
+        </tr> 
+    </table>
+
+</body>
+</html>

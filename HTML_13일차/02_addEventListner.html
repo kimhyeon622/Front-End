@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="addEventListner를 사용하여 event 실행하기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>addEventListner</title>
+</head>
+<body>
+    <input type="text" id="txt" onfocus="focusIn()" onmouseout="focusOut()">
+    <button id="btn" click="btnEvt()">버튼</button>
+    <h3 id="msg">Focus Null</h3>
+    
+</body>
+
+<script>
+    /*
+        [1] addEventListner : event를 깔끔하게 작업하기 위해 사용
+        [2] let 변수 = document.getElementById("id이름");
+        [3] 변수.addEventListner(사용할 event, function 이름);
+    */
+
+    let txt = document.getElementById("txt");
+    let msg = document.getElementById("msg");
+    let btn = document.getElementById("btn");
+
+
+    txt.addEventListener("focusin", focusIn)
+    txt.addEventListener("focusout", focusOut)
+    btn.addEventListener("click", btnEvt)
+
+    function focusIn(){
+        msg.innerHTML = "onfocus!";
+        txt.style.backgroundColor = "lightseagreen"
+    }
+
+    function focusOut(){
+        msg.innerHTML = "outfocus!";
+        txt.style.backgroundColor = "lightskyblue"
+    }
+
+    function btnEvt(){
+        alert("클릭했습니다!");
+    }
+
+    // 버튼을 하나 만들어서 클릭 했을 경우
+    // "클릭했습니다!" 알림창이 뜨도록 함수를 설정하시오.
+</script>
+</html>

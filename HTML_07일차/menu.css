@@ -1,0 +1,21 @@
+ul{
+    border-top: 2px solid steelblue;
+    border-bottom: 2px solid steelblue;
+    width: 98%;
+    overflow: hidden;
+}
+
+ul>li{
+    width: 100%;
+    height: 50%;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+    color: steelblue;
+
+    list-style: none;
+    /* list-style을 변경할 수 있다. none으로 하면 아무것도 보이지 않는다. */
+
+    box-sizing: border-box;
+    /* box-sizing속성의 값을 broder-box로 지정하면 테두리를 포함한 크기를 지정할 수 있다.  */
+}

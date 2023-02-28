@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.05">
+    <meta name="description" content="Interval과 setTimeOut에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Timing</title>
+</head>
+<body>
+    <button id="itv">시작</button>
+    <button id="stp">정지</button>
+    <button id="sto">3초후</button>
+    <h3 id="result">0</h3>
+</body>
+
+<script>
+    let itv = document.getElementById("itv")
+    let stp = document.getElementById("stp")
+    let sto = document.getElementById("sto")
+    let result = document.getElementById("result")
+
+    let myTime;
+    let x = 0;
+
+    // 시작(itv) 버튼을 click할 경우 발생
+    itv.addEventListener("click", function(){
+        clearInterval(myTime);
+
+        myTime = setInterval(function(){
+            x++;
+            result.innerHTML = x;
+        }, 1000);
+
+        // setInterval(function, milisecond);
+        // milisecond만큼 function을 계속 실행한다.
+        // 1000 milisecond = 1 second(1초)
+    });
+
+    // 정지(stp) 버튼을 click할 경우 발생
+    stp.addEventListener("click", function(){
+        clearInterval(myTime);
+        x = 0;
+        result.innerHTML = x;
+    });
+
+    // 3추후(sto) 버튼을 click할 경우 발생
+    sto.addEventListener("click", function(){
+        setTimeout(function(){
+            alert('3초가 지났습니다.')
+        }, 3000);
+
+        // setTimeout(function, milisecond);
+        // milisecond가 지난 후에 function이 단 한번 실행된다.
+
+
+    });
+
+    
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.19">
+    <meta name="description" content="조건문예제2">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>조건문예제2</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // 1부터 10사이의 숫자를 하나 입력 받은 후
+    // 1, 3, 5, 7, 9일떄는 "홀수 입니다."
+    // 2, 4, 6, 8, 10일떄는 "짝수 입니다."
+    // 그 외에 숫자는 "잘못 입력했습니다."
+    // 를 alert()으로 출력하기!
+
+    let num = Number(prompt("1부터 10사이의 숫자를 입력하세요."));
+    switch (num) {
+        case 1:
+        case 3:
+        case 5:
+        case 9:
+            alert("홀수 입니다.");
+            break;
+        
+        case 2:
+        case 4:
+        case 6:
+        case 8:
+        case 10:
+            alert("짝수 입니다.");
+            break;
+        default:
+            alert("잘못 입력했습니다.");
+            break;
+    }
+</script>
+
+</html>

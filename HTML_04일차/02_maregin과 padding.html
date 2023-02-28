@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.08">
+    <meta name="description" content="margin과 padding에 대해 알아보자">
+    
+    <title>margin솨 padding</title>
+
+    <style>
+        p{
+            background-color: skyblue;
+            border: solid 3px blue;
+        }
+        .p1{
+            background-color: slateblue;
+            border: solid 3px purple;
+            margin: 10px;
+            padding: 0px;
+        }
+        .p2{
+            background-color: springgreen;
+            border: solid 3px green;
+            margin: 20px;
+            padding: 20px;
+        }
+        .p3{
+            background-color: lemonchiffon;
+            border: solid 3px yellow;
+            margin: 10px  20px   30px  40px;
+            /*      위    오른쪽  아래  왼쪽  (시계방향) */
+        }
+        .p4{
+            background-color: lightpink;
+            border: solid 3px red;
+            padding: 10px  20px  30px  40px;
+            /*       위   오른쪽  아래  왼쪽  (시계방향) */
+        }
+        .p5{
+            background-color: lightgray;
+            border: solid 3px black;
+            padding-bottom: 30px;
+            /* padding : 0px 0px 30px 0px; 와 같은 결과 */
+            /* 위(top) 오른쪽(right) 아래(bottom) 왼쪽(left) */
+        }
+    </style>
+</head>
+<body>
+    <h2>margin : 요소와 요소간의 간격, 즉 바깥여백을 의미</h2> 
+     <h2>padding : 요소 안, 내부의 여백을 의미</h2>
+
+     <p>background-color : "skyblue"; 
+        <br/> border : solid 3px blue;</p>
+
+    <p class="p1">margin : 10px; padding: 0px;</p>
+    <p class="p2">margin : 20px; padding: 20px;</p>
+    <p class="p3">margin : 10px 20px 30px 40px;</p>
+    <p class="p4">padding : 10px 20px 30px 40px;</p>
+    <p class="p5">padding : 0px 0px 30px 0px;</p>
+</body>
+</html>

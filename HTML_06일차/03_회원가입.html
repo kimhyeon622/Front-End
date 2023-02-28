@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.14">
+    <meta name="description" content="회원가입 페이지를 만들어보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 1px solid black;
+        }
+
+        td,
+        tr {
+            border: 1px solid black;
+            width: 100px;
+            padding: 10px;
+        }
+        tr:nth-child(odd){
+            background-color:rgba(159, 217, 240, 0.5);
+        }
+        .center1 {
+            text-align: center;
+            font-weight: bold;
+        }
+        
+        .center2 {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        caption {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px 0px 10px 0px;
+        }
+
+    </style>
+    <title>인천일보 아카데미 회원가입 페이지</title>
+</head>
+
+<body>
+    <form action="https://www.icia.co.kr">
+        <table>
+            <caption>인천일보아카데미 가입 신청서</caption>
+            <tr>
+                <td colspan="2" class="center1" >가입 양식</td>
+            </tr>
+            <tr>
+                <td class="center1">항목</td>
+                <td style="width: 300px;" class="center1">내용</td>
+            </tr>
+            <tr>
+                <td class="center2">아이디</td>
+                <td>
+                    <input type="text" name="userId" id="userId" />
+                </td>
+            </tr>
+            <tr>
+                <td class="center1">비밀번호</td>
+                <td>
+                    <input type="password" name="userPw" id="userPw" />
+                </td>
+            </tr>
+            <tr>
+                <td class="center2">이름</td>
+                <td><input type="text" name="username" id="username" /></td>
+            </tr>
+            <tr>
+                <td class="center1">성별</td>
+                <td>
+                    <input type="radio" name="gender" id="gender" value="남" checked />남자
+                    <input type="radio" name="gender" id="gender" value="여" />여자
+                </td>
+            </tr>
+            <tr>
+                <td class="center2">생년월일</td>
+                <td><input type="date" name="date1" id="date1" /></td>
+            </tr>
+            <tr>
+                <td class="center1">관심 분야</td>
+                <td>
+                    <input type="checkbox" name="days" id="days1" value="Java" />Java
+                    <input type="checkbox" name="days" id="days2" value="Database" />Database
+                    <br />
+                    <input type="checkbox" name="days" id="days3" value="App" />App
+                    <input type="checkbox" name="days" id="days4" value="HTML" />HTML
+                </td>
+
+            </tr>
+            <tr>
+                <td class="center2">코딩 실력(1~5)</td>
+                <td>
+                    <input type="range" name="co" id="co" min="0" max="255">
+                </td>
+
+            </tr>
+            <tr>
+                <td class="center1">거주지역</td>
+                <td>
+                    <select name="home" id="home">
+                        <option value="in">인천</option>
+                        <option value="su">서울</option>
+                        <option value="Ay">안양</option>
+                    </select>
+                </td>
+
+            </tr>
+            <tr>
+                <td class="center2">이메일</td>
+                <td>
+                    <input type="email" name="userEmail" id="userEmail" />
+                </td>
+
+            </tr>
+            <tr>
+                <td colspan="3" rowspan="3" class="center1">
+                    <input type="submit" value="작성완료">
+                    <input type="reset" value="다시 작성하기">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.14">
+    <meta name="description" content="input태그의 종류에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>입력(input)태그</title>
+
+    <style>
+        fieldset {
+            margin-bottom: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="https://www.icia.co.kr">
+        <!-- form태그에서 method 속성 생략시 get으로 설정 -->
+    <fieldset>
+        <legend>text & password</legend>
+        <h2>텍스트 타입과 비밀번호 타입</h2>
+        아이디 : <input type="text" name="userId" id="userId" /><br />
+        패스워드 : <input type="password" name="userPw" id="userPw" />
+    </fieldset>
+
+    <fieldset>
+        <legend>button</legend>
+        <p>버튼 타입</p>
+        <input type="button" value="버튼1" onclick="button1()"/>
+        <input type="button" value="버튼2" onclick="alert('버튼을 클릭했습니다.')" />
+    </fieldset>
+
+    <fieldset>
+        <legend>radio</legend>
+        <p>라디오 버튼</p>
+        남자<input type="radio" name="gender" value="남" />
+        여자<input type="radio" name="gender" value="여" />
+        없음<input type="radio" name="gender" value="무" checked/>
+        <!-- 같은 그룹은 naem값이 같아야 한다 -->
+        <br/><br/>학년선택<br/>
+        1학년 <input type="radio" name="grade" value="1" checked/>
+        2학년 <input type="radio" name="grade" value="2" checked/>
+        3학년 <input type="radio" name="grade" value="3" />
+        4학년 <input type="radio" name="grade" value="4" />
+    </fieldset>
+
+    <fieldset>
+        <legend>checbox</legend>
+        <p>체크박스 타입</p>
+        가능한 요일을 선택해주세요 : <br/>
+        월요일 <input type="checkbox" name="days" id="days1" value="월"/>
+        화요일 <input type="checkbox" name="days" id="days2" value="화"/>
+        수요일 <input type="checkbox" name="days" id="days3" value="수"/>
+        목요일 <input type="checkbox" name="days" id="days4" value="목"/>
+        금요일 <input type="checkbox" name="days" id="days5" value="금"/>
+        토요일 <input type="checkbox" name="days" id="days6" value="토"/>
+        일요일 <input type="checkbox" name="days" id="days7" value="일"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>hidden</legend>
+        <p>숨김 정보</p>
+        <input type="hidden" name="hiddenValue" value="숨김정보1"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>file</legend>
+        <p>파일 업로드</p>
+        <input type="file" name="fileUpload" />
+    </fieldset>
+
+    <fieldset>
+        <legend>date</legend>
+        <p>날짜 선택</p>
+        출국일 : <input type="date" name="date1"/>
+        입국일 : <input type="date" name="date1"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>color</legend>
+        <p>색상 선택</p>
+        <input type="color" name="color1"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>email</legend>
+        <p>이메일 주소</p>
+        <input type="email" name="userEmail"/>
+    </fieldset>
+
+    <fieldset>
+        <legend>select</legend>
+        <p>선택 버튼</p>
+        <!-- input태그가 아닌 select태그 -->
+        <!-- select는 option태그와 짝꿍 -->
+        <select name="dreamCar" id="dreamCar">
+            <option value="hd">현대</option>
+            <option value="kia">기아</option>
+            <option value="tsla">태슬라</option>
+            <option value="benz">벤츠</option>
+            <option value="porshe">포르쉐</option>
+        </select>
+    </fieldset>
+
+    <fieldset>
+        <legend>submit & reset</legend>
+        <p>전송과(제출)과 새로(다시)작성</p>
+        <input type="submit" value="전송">
+        <input type="reset" value="다시작성">
+    </fieldset>
+</form>
+
+</body>
+<script>
+    function button1(){
+        location.href='http://www.google.com';
+    }
+</script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.05">
+    <meta name="description" content="현재시ㅣ간을 출력하시오.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>현재시간</title>
+</head>
+<body>
+    <button onclick="live1" id="live1">날짜</button>
+    <button onclick="live2" id="live2">시간</button>
+    <h1 id="result1"></h1>
+    <h1 id="result2"></h1>
+</body>
+
+<script>
+    let live1 = document.getElementById("live1");
+    let live2 = document.getElementById("live2");
+    let result1 = document.getElementById("result1");
+    let result2 = document.getElementById("result2");
+
+    
+        myDate = new Date();
+
+    
+
+        // 년
+        let yy = myDate.getFullYear();
+        console.log(yy);
+
+        // 월
+        let mm = myDate.getMonth() + 1;
+        console.log(mm);
+
+        // 일
+        let dd = myDate.getDate();
+        console.log(dd);
+
+        // 요일
+        let days = myDate.getDay();
+        console.log(days);
+
+        let day = ["일", "월", "화", "수", "목", "금", "토"]
+        console.log(day[days])
+
+        
+
+    live1.addEventListener("click", function(){
+        result1.innerHTML = yy + "년 " + mm + "월 " + dd + "일  " + day[days] + "요일";
+        console.log(myDate);
+    });
+
+    live2.addEventListener("click", function(){
+        setInterval(function () {
+        myDate = new Date();
+
+            // 시
+        let hh = myDate.getHours();
+        if (hh<10) {
+            hh="0"+hh
+        }
+
+        // 분
+        let mi = myDate.getMinutes();
+        if (mi<10) {
+            mi="0"+mi
+        }
+
+        // 초
+        let ss = myDate.getSeconds();
+        if (ss<10) {
+            ss="0"+ss
+        }
+        
+        result2.innerHTML = hh + "시 " + mi + "분 " + ss + "초";
+    }, 500);
+    });
+
+</script>
+</html>

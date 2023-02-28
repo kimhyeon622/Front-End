@@ -1,0 +1,74 @@
+input{
+    background-color: cornflowerblue;
+}
+
+input:focus{
+    background-color: white;
+    border: 2px solid greenyellow;
+}
+
+a{
+    color: red;
+    text-decoration: none;
+}
+
+/* 방문한 사이트의 색이 바뀜 */
+a:visited{
+    color: skyblue;
+}
+
+/* 마우스를 a태그 요소위에 올렸을 떄 */
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+
+/* 요소를 클릭(활성화)하는 순간 */
+a:active{
+    color: green;
+    background-color: yellow;
+}
+
+body{
+    color: steelblue;
+}
+
+h2{
+    color: orange;
+}
+
+/* class="ex" */
+.ex{
+    color: green;
+}
+
+/* p태그 안에서 class="ex"인 요소의 스타일을 지정 */
+p.ex{
+    color: hotpink;
+}
+
+div{
+    border : 3px solid red;
+    height: 200px;
+}
+
+.div1{
+    overflow: hidden;
+}
+
+.div2{
+    overflow: scroll;
+}
+
+.div3{
+    overflow: auto;
+}
+
+.div4{
+    margin: 10px;
+    padding: 10px;
+}
+
+.script{
+    font-size: 30px;
+}

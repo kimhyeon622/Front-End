@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.19">ㅑ
+    <meta name="description" content="조건문">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>조건문</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    /*
+    [1] if-else 조건문 문법
+    if(조건식 or 조건변수){
+        조건식이 참일 경우 실행
+    } else {
+        조건식이 거짓일 경우 실행
+    }
+
+    */
+
+    let coniditon = true;
+
+    if (!coniditon) {
+        alert('조건식(condition)이 참(true)입니다.');
+    } else {
+        alert('조건식(condition)이 거짓(false)입니다.');
+    }
+
+    let num1 = 5;
+    let num2 = 8;
+
+    if (num1 > num2) {
+        //console.log('num1이 num2이 보다 크다')
+    } else {
+        //console.log('num1이 num2이 보다 작다')
+    }
+
+    // Q. 내 나이 14살
+    // 나이가 8살보다 크거나 같다면 초등학교 간다
+    // 그렇지 않다면 학교에 가지 않는다.
+
+    let age = 14;
+
+    if (age >= 8) {
+        console.log('초등학교 간다')
+    } else {
+        console.log('학교에 가지 않는다.')
+    }
+
+
+    /*
+ 
+    [2] else-if문
+ 
+    if(조건식1){
+         조건식1이 참일 경우 실행되는 문장;
+    }else if(조건식2){
+         조건식2가 참일 경우 실행되는 문장;
+    } else{
+         조건식1과 조건식2가 모두 거짓일 경우 실행되는 문장;
+    }
+    */
+
+    let socore = 90;
+
+    // 점수가 90점 이상이면"A학점 입니다."를 alert창으로 출력
+    // A : 90~100
+    // B : 80~89
+    // C : 70~79
+    // D : 60~69
+    // F : 60미만
+
+    if (socore >= 90) {
+        alert('A학점 입니다.')
+    } else if (socore >= 80) {
+        alert('B학점 입니다.')
+    } else if (socore >= 70) {
+        alert('C학점 입니다.')
+    } else if (socore >= 60) {
+        alert('D학점 입니다.')
+    } else {
+        alert('F학점 입니다.')
+    }
+
+    /*
+    [3] 증첩 if문 : if문 안에 if문 생성
+    if(조건식){
+        else {
+
+        }
+    } else {
+        if(조건식){
+
+        } else{
+
+        }
+    }
+        
+    */
+
+    /*
+    // 점수가 90점 이상이면"A학점 입니다."를 alert창으로 출력
+    // A+ : 95~100    A : 90~94
+    // B+ : 85~89     B : 80~84
+    // C+ : 75~79     C : 70~74
+    // D+ : 65~69     D : 60~64
+    // F : 60미만
+
+    */
+
+    // 변수값 입력 prompt()
+    let score = Number(prompt('점수를 입력하세요'));
+    let grade;
+    
+    if (score > 100) {
+        alert("입력범위를 초과했습니다.");
+    }
+    else {
+    }if (score >= 90) {
+        if (score >= 95) {
+            grade = "A+";
+        } else {
+            grade = "A";
+        }
+    }else if (score >= 80) {
+        if (score >= 85) {
+            grade = "B+";
+        } else {
+            grade = "B";
+        }
+    }else if (score >= 70) {
+        if (score >= 75) {
+            grade = "C+";
+        } else {
+            grade = "C";
+        }
+    }else if (score >= 60) {
+        if (score >= 65) {
+            grade = "D+";
+        } else {
+            grade = "D";
+        }
+    } else {
+        grade = "F";
+    }
+
+    alert("학점은 "+ grade + "입니다.");
+</script>
+
+</html>

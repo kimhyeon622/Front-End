@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.06">
+    <meta name="description" content="글자색이 변하는 이벤트를 사용해보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>글자색 변경하기</title>
+</head>
+<body>
+    <h1 id="txt">글자색이 변경된다.</h1>
+    <button id="btn" onclick="limit()">색상 변경</button>
+</body>
+
+<script>    
+    // 버튼을 눌렀을 경우 1초마다 색상이 변하도록
+    // addEventListener를 사용
+    let txt = document.getElementById("txt")
+    let btn = document.getElementById("btn")
+
+    let fColor = ["red", "orange", "yellow", "green", "blue", "navy", "purple"];
+    let i = -1;
+    let itv;
+
+    btn.addEventListener("click", function(){
+        clearInterval(itv);
+
+        setInterval(function(){
+            i++;
+            if (i==fColor.length) {
+                i=0;
+            }
+            txt.style.color = fColor[i];
+        }, 1000);
+    }); 
+</script>
+</html>

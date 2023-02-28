@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.22">
+    <meta name="description" content="객체를 활용한 ATM기 만들기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title></title>
+</head>
+<body>
+    <fieldset>
+        <legend><img src="ATM.PNG" alt="ATM기"></legend>
+        <div>
+        <input type="text" id="amont" placeholder="금액을 입력하세요">
+        </div>
+        <br/>
+        <div>
+        <button onclick="input()"><img src="입금.PNG" alt="입금" ></button>
+        <button onclick="output()"><img src="출금.PNG" alt="출금"></button>
+        <button><img src="잔액.PNG" alt="잔액"></button>
+        </div>
+        <div id="money">10000
+        </div>
+    </fieldset>
+</body>
+
+<script>
+
+let Account = {};
+
+Account.balace = 0;
+
+let amount = parseInt(document.getElementById("amount"))
+
+Account.deposit = function(amount){
+        this.balace += amount;
+        return amount;
+}
+
+Account.withdraw = function(amount){
+
+if(this.balace >= amount){
+  this.balace -= amount;  
+}else{
+    alert("잔액이 부족합니다.")
+}
+
+}
+
+
+function input(){
+    Account.deposit(amount);
+    console.log(Account.balace+"원");
+}
+
+money.innerHTML = amount;
+
+</script>
+</html>

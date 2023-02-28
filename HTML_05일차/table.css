@@ -1,0 +1,13 @@
+table,
+tr{
+    
+    border-collapse: collapse;
+    /* 테이블의 선을 합친다. */
+}
+
+td,
+tr {
+    border: 1px solid;
+    width: 100px;
+    padding: 10px;
+}

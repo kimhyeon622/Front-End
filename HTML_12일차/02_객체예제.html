@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.22">
+    <meta name="description" content="객체를 활용한 계좌 만들기">
+    <link rel="shortcut icon" href="..favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>객체 예제</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // Account 객체 생성
+    let Account = {};
+
+    // key = balace, value = 0;
+    Account.balace = 0;
+
+    // 객체 메소드(함수) 생성
+    // amount : 추후 입력할 금액
+    Account.deposit = function(amount){
+        this.balace += amount;
+        // this.balace = this.balace + amont
+        // 현재 잔액 = 기존 잔액 + 입금액
+
+        // this.balace는 Account 객체 안에 있는 key값
+        // Account.balance을 의미
+    }
+
+    // 출금(withdraw) 함수
+    Account.withdraw = function(amount){
+
+        if(this.balace >= amount){
+          this.balace -= amount;  
+        }else{
+            alert("잔액이 부족합니다.")
+        }
+        
+    }
+
+    // 잔액조회 함수 toString()
+    // Account.balance 출력
+
+    Account.toString = function(){
+        return "계좌잔액 : " + this.balace+"원";
+    }
+
+    /*
+        [1] 기본형 함수
+        function 함수이름1(){
+            실행내용;
+        }
+
+        [2] 반환형 함수
+        function 함수이름2(){
+            return 반환값;
+        }
+
+        ex)
+
+        function numFunc(){
+            return 13;
+        }
+
+        let num = numFunc();
+        : num 변수에 numFunc()함수에서 반환된 값 13이 들어간다.
+        : num = 13;
+    */
+
+    ///////////////////////////////////////////////////////////////////////////////
+
+    Account.deposit(10000); //10000원 입금
+    console.log("10000원 입금 후 : "+Account.balace+"원");
+
+    Account.deposit(20000);
+    console.log("20000원 입금 후 : "+Account.balace+"원");
+
+    Account.withdraw(10000); //10000원 입금
+    console.log("10000원 출금 후 : "+Account.balace+"원");
+
+    Account.withdraw(20000);
+    console.log("20000원 출금 후 : "+Account.balace+"원");
+
+    Account.withdraw(5000);
+    console.log("5000원 출금 후 : "+Account.balace+"원");
+
+    console.log(Account.toString());
+</script>
+</html>

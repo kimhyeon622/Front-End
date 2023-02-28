@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.19">
+    <meta name="description" content="조건문예제3">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>조건문예제3</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // 월(month)를 입력받아서 해달 월의 마지막 일(day)을 구하여라
+    // 2월은 윤년을 제외한 28일로 계산
+
+    let month = Number(prompt("월(month)을 입력하세요"));
+    let day = 0;
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            day = 31;
+            break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            day = 30;
+            break;
+
+        case 2:
+            day = 28;
+            break;
+        default:
+            alert("잘못 입력하셨습니다.")
+            break;
+    }
+    if(day!=0){
+    alert("입력하신 "+month+"월은 "+ day+"일까지 있습니다.")
+    }
+
+</script>
+</html>

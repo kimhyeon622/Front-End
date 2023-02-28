@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="마우스의 움직임 파악하기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>마우스 위치</title>
+</head>
+<body>
+    <h2>mouse position => <span id=pos1></span></h2>
+    <h2>mouse position => <span id=pos2></span></h2>
+</body>
+
+<script>
+    let pos1 = document.getElementById("pos1");
+    let pos2 = document.getElementById("pos2");
+
+    // 변수.addEventListner(event, funtino)
+
+    document.addEventListener("mousemove", mouseMove);
+
+    function mouseMove(move) {
+        //screen : 모니터 기준
+        // client : 브라우저 기준
+
+        pos1.innerHTML = "모니터(screen) X : " + move.screenX + ", Y : " + move.screenY
+        pos2.innerHTML = "브라우저(client) X : " + move.clientX + ", Y : " + move.clientY
+    }
+</script>
+</html>

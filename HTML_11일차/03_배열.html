@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.21">
+    <meta name="description" content="자바스크립트에서 사용하는 배열에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>배열(Arrat)</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // 배열(Array) : 같은 타입의 데이터를 하나의 변수에 저장하는 구조
+
+    // 배열 선언방법(1)
+    let arr = [];
+
+    // console창을 통해 arr의 타입에 대해 알아보시오.
+    console.log(typeof (arr)); // object
+
+    // 배열 선언방법(2)
+    let arrString = new Array();
+    console.log(typeof (arrString));
+
+    // 배열 값 넣기
+    arr = [11, 21, 3, 47, 5];
+
+    // 배열의 가장 큰 값과 가장 작은 값을 구하시오.
+    let max = arr[0];
+    let min = arr[0];
+
+    // for(let i = 0; i < arr.length; i++){}
+    for(let i in arr){
+        if(arr[i]>max){
+           max = arr[i]; 
+        } else if(arr[i]<min){
+            min = arr[i];
+        }
+        
+        
+    }
+    console.log("max : "+max+" | min : " + min)
+
+    arrString=["A", "B", "C", "DE", 1, 2, 3]
+
+    // 배열 출력하기
+    console.log(arrString)
+
+    // 배열값 중에 DE 값만 출력하기
+    console.log(arrString[3])
+
+    // 배열크기 : 데이터의 갯수
+    console.log("arrString 배열크기 : " + arrString.length);
+    console.log("arr 배열크기 : " + arr.length);
+
+    // isArray() : 배열인지 아닌지 확인해보기
+    console.log("arr는 배열인가? " + Array.isArray(arr));
+    console.log("arrString는 배열인가? " + Array.isArray(arrString));
+
+    let arrNum = 0;
+    console.log("arrNum는 배열인가? "+Array.isArray(arrNum));
+
+</script>
+</html>

@@ -1,0 +1,8 @@
+div{
+    width: 250px;           /* 가로 길이 */
+    height: 250px;          /* 세로 길이 */
+    line-height: 250px;     /* 세로 정렬 */
+    text-align: center;     /* 가로 정렬 */
+    font-size: 20px;
+    background-color: steelblue;
+}

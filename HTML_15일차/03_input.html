@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.06">
+    <meta name="description" content="입력한 값 보여주고 글자수 알려주기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>입력한 값 표시하기</title>
+</head>
+
+<body>
+    <h1>당신이 입력한 값 : <span id="txt"></span></h1>
+    <br />
+    <input type="text" id="in">
+    <span id="num">(<span id="text">0</span>자 입력)</span>
+</body>
+
+<script>
+    let fColor = ["black", "orange", "red"];
+    let i = 0;
+    let text1 = document.getElementById("in");
+    let txt = document.getElementById("txt");
+    let text2 = document.getElementById("text");
+    let num = document.getElementById("num");
+    let test = text1.value;
+
+    addEventListener("keyup", function () {
+        txt.innerHTML = text1.value;
+    });
+
+    
+    
+    addEventListener("keyup", function () {
+        text2.innerHTML = ((text1.value).length);
+        if ((text1.value).length <= 4) {
+            num.style.color = fColor[0];
+        } else if ((text1.value).length <= 9) {
+            num.style.color = fColor[1];
+        } else if((text1.value).length <= 10){
+            num.style.color = fColor[2]
+        } 
+        
+
+        if((text1.value).length > 10){
+            alert("더이상 입력할 수 없습니다.");
+            text1.value = text1.value.substring(0,10);
+            txt.innerHTML = text1.value;
+            text2.innerHTML = ((text1.value).length);
+        }
+    },10);
+
+
+
+
+
+
+
+</script>
+
+</html>

@@ -1,0 +1,100 @@
+div {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+#wrap {
+    background-color: steelblue;
+    width: 550px;
+    height: 600px;
+}
+
+#re {
+    text-align: right;
+    height: 0px;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+#result {
+    height: 100px;
+    line-height: 100px;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+#result,#ac,#enter {
+    background-color: lightpink;
+}
+
+#ac:hover,#enter:hover {
+    background-color: hotpink;
+}
+
+#ac:active,
+#enter:active {
+    background-color: deeppink;
+}
+
+#btn {
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.nums {
+    width: 190px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+.num,
+.oper {
+    width: 75px;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+}
+
+
+.num,
+#num0 {
+    background-color: lightgray;
+    border-radius: 15px;
+}
+
+.num:hover,
+#num0:hover {
+    background-color: gray;
+    color: black;
+}
+
+.num:active,
+#num0:active {
+    background-color: black;
+    color: white;
+}
+
+
+.oper {
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+}
+
+.oper:hover {
+    background-color: gray;
+}
+
+.oper:active {
+    background-color: lightgray;
+}
+
+.group {
+    clear: both;
+}

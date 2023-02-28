@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.16">
+    <meta name="description" content="논리연산자의 데이터 타입을 알 수 있다.">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>논리연산자</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /*
+    [4] 논리연산자 - 이항연산자 : 참(true) / 거짓(flase)을 판별하기 위한 연산자
+        종류 : AND연산자, OR연산자, NOT연산자
+
+        (1) AND연산자 : &&
+        - A && B 
+        A와 B가 모두 true여야 결과가 true
+        A나 B중에 하나라도 flase가 있으면 결과는 false
+
+        (2) OR연산자 : ||
+        - A || B 
+        A나 B중에 하나라도 true가 있으면 결과는 true
+        A와 B가 모두 false여야 결과가 false
+
+        (3) NOT연산자 : !
+        - !A : A가 true면 결과는 false, A가 false면 결과는 true
+    */ 
+
+   let result;
+
+    // AND연산
+    result = true && true;
+    console.log("true && true 결과 : " + result);
+
+    result = true && false;
+    console.log("true && false 결과 : " + result);
+
+    result = false && false;
+    console.log("false && false 결과 : " + result);
+
+    // OR연산
+    result = true || true;
+    console.log("true || true 결과 : " + result);
+
+    result = true || false;
+    console.log("true || false 결과 : " + result);
+
+    result = false || false;
+    console.log("false || false 결과 : " + result);
+
+    // NOT연산
+    let boolVar = true;
+    result = !boolVar;
+    console.log("!boolVar : " + result);
+
+    result = !!boolVar;
+    console.log("!!boolVar : " + result);
+
+    result = boolVar || (5<3);
+    console.log("논리형타입 변수 || 비교연산자 : " + result);
+
+</script>
+</html>

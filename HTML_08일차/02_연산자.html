@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.16">
+    <meta name="description" content="자바스크립트에서 사용하는 연산자에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>연산자(Operator)</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    /*
+        연산자(Operator) : 프로그램 만들 떄 변수나 값의 연산을 위해 사용되는 부호
+
+        [1] 연산자의 종류
+        + : 더하기
+        - : 뺴기
+        * : 곱하기
+        / : 나누기
+        % : 나머지
+        ++ : 증가
+        -- : 감소
+
+    */
+
+   let a = 3;
+   let b = 1.5;
+   let c = a*b;
+
+   // a,b,c를 console창에 출력해보기!
+   console.log("a : "+ a);
+   console.log("b : "+ b);
+   console.log("a*b : "+ c);
+
+   /*
+        [2] 자바스크립트에 내장된 수학 함수
+        Math.sqrt(z) : z에 대한 제곱근
+        Math.abs(y-x) : y-x에 대한 절대값
+        z.toFixed(2) : z를 소수점 2째자리까지만 표시 3쨰자리에서 반올림
+        parseInt(y) : y값에서 소수점을 버리고 정수로 출력
+
+        (1) a+1에대한 제곱근
+        (2) b-a에 대한 절대값
+        (3) c를 소수점 2째 자리까지 출력
+        (4) b를 정수로 출력
+        (5) 5를 3으로 나눴을떄 나머지 구하기!
+
+   */
+    console.log("(1) : "+ Math.sqrt(a+1))
+    console.log("(2) : "+ Math.abs(b-a))
+    console.log("(3) : "+ c.toFixed(2))
+    console.log("(4) : "+ parseInt(b))
+    console.log("(5) : "+ 5%3)
+
+    /*
+
+    [3] 삼항연산자(조건연산자) => [조건] ? [참]일떄 : [거짓]일떄
+
+    */
+
+    let result = (10>11) ? "참" : "거짓";
+
+    let result1 = (10 > 11) ? 10 : 11;
+
+    // result의 값과 타입을 HTML에 출력하시오. 
+    document.write("<h1>result : "+ result+ ", </h1><h1>result의 데이터 타입 : " + typeof(result)+"</h1>");
+    document.write("<h1>result1 : "+ result1+ ", </h1><h1>result1의 데이터 타입 : " + typeof(result1)+"</h1>");
+    
+    let now = new Date();
+
+    document.write(now);
+
+    // 현재 시 : now.getHours() - 0부터 23시까지
+    let ampm = (now.getHours()< 12) ? "오전" : "오후";
+    
+    document.write("<h1>지금은 " + ampm +" " + (now.getHours()%12) + "시 입니다.</h1>")
+
+
+
+</script>
+</html>

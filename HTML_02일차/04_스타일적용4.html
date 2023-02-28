@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 작성자 -->
+    <meta name="author" content="kimhyeon">
+    <!--  작성 날짜 -->
+    <meta name="date" content="2022-09-06">
+    <!-- 배울 내용 -->
+    <meta name="descript" content="스타일 적용4">
+
+    <title>스타일적용4</title>
+
+    <!-- 1.링크방식 : link 사용 -->
+
+    <link rel="stylesheet" href="style04.css">
+
+
+    <!-- 2.내장방식 : style -->
+
+    <!-- <style>
+
+        .p4{
+
+            /* . p4 : Class="p4"*/
+
+            color: blue;
+
+        }
+
+        .p5{
+
+            font-size: 5px
+
+        }
+
+        .p6{
+
+            font-family: '고닉';
+
+        }
+
+        #id1{
+
+            font-size: 100px;
+
+        }
+
+    </style> -->
+
+</head>
+
+<body>
+
+    <!-- 3.인라인방식 : 태그에 직접 스타일 적용 -->
+
+    <p style="color: red;">태그1 : 글자색 red</p>
+
+    <p style="font-size: 50px;">태그2 : 글자크기</p>
+
+    <p style="font-family: '궁서';">태그3 : 글꼴 궁서</p>
+
+    <!-- 글꼴 : font-family : '궁서' -->
+
+​
+
+    <!-- 내장방식 사용 -->
+
+    <p class="p4">p태그4 : 글자색 blue</p>
+
+    <p class="p5">p태그5 : 글자크기 5px</p>
+
+    <p class="p6">p태그6 : 글꼴 고닉</p>
+
+    <!-- Class(.) : 반복적으로 같은 스타일을 적용하기 위해 쓰이는 속성 -->
+
+    <!-- html문서 내에서 똑같은 속성값을 여러번 사용할 수 있다. -->
+
+​
+
+    <p class="p4" class="p5" class="p6">class p4, p5, p6 적용</p>
+
+​
+
+    <!-- id(#) : html문서 내에서 똑같은 속성값을 한번만 사용할 수 있다. -->
+
+    <p id="id1">p태그에 #id1 속성 적용</p>
+
+</body>
+
+</html>

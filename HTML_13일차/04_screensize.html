@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="스크린 사이즈 측정하기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>스크린 크기</title>
+</head>
+<body>
+    <h2>1</h2>
+    <h2>2</h2>
+    <h2>3</h2>
+</body>
+
+<script>
+    let h2 = document.getElementsByTagName("h2");
+
+    console.log(h2);
+    console.log(typeof(h2));
+    console.log(Array.isArray(h2))
+
+    let ww = window.innerWidth;
+    let wh = window.innerHeight;
+
+    let sw = screen.width;
+    let sh = screen.height;
+
+    let aw = screen.availWidth;
+    let ah = screen.availHeight;
+
+    h2[0].innerHTML = "브라우저 사이즈 : " + ww + " X " + wh;
+    h2[1].innerHTML = "모니터 사이즈 : " + sw + " X " + sh;
+    h2[2].innerHTML = "모니터(작업표시줄 제외) 사이즈 : " + aw + " X " + ah;
+
+    // document.getElementById("winSize").innerHTML = "브라우저 사이즈 : " + ww + " X " + wh;
+    // document.getElementById("screenSize").innerHTML = "모니터 사이즈 : " + sw + " X " + sh;
+    // document.getElementById("availSize").innerHTML = "모니터(작업표시줄 제외) 사이즈 : " + aw + " X " + ah;
+
+
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.06">
+    <meta name="description" content="팝업창의 종류">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>popup창</title>
+</head>
+<body>
+    <button id="popup">알림창</button>
+    <button id="conf">선택창</button>
+    <button id="promp">입력창</button>
+</body>
+
+<script>
+    let popup = document.getElementById("popup");
+    let conf = document.getElementById("conf");
+    let proomp = document.getElementById("promp");
+
+    popup.addEventListener("click", function(){
+        alert('알림창 입니다.')
+    });
+
+    conf.addEventListener("click", function(){
+        let con = confirm("정말로 삭제하시겠습니까?")
+        console.log(con);
+
+        if(con==true){
+            alert("삭제가 완료되었습니다.")
+        } else{
+            alert("삭제를 취소했습니다.")
+        }
+    });
+
+    proomp.addEventListener("click", function(){
+        let stuName = prompt("당신의 이름은?");
+        console.log(stuName);
+
+        if(stuName==""){
+            alert("이름을 입력해주세요.")
+        } else if(stuName==null){
+            alert("취소를 눌렀습니다.")
+        } else{
+            alert(stuName + "님 환영합니다.");
+        }
+    });
+</script>
+</html>

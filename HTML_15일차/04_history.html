@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.06">
+    <meta name="description" content="페이지 기록">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>history</title>
+</head>
+<body>
+    <button id="naver">네이버 페이지</button>
+    <button id="back">이전 페이지</button>
+    <button id="forward">다음 페이지</button>
+</body>
+
+<script>
+    let naver = document.getElementById("naver");
+    let back = document.getElementById("back");
+    let forward = document.getElementById("forward");
+
+    naver.addEventListener("click", function () {
+        location.href="http://www.naver.com";
+    });
+
+    back.addEventListener("click", function () {
+        window.history.back();
+    });
+
+    forward.addEventListener("click", function () {
+        window.history.forward();
+    });
+
+    
+
+</script>
+</html>

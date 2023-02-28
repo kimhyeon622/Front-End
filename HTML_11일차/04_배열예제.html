@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.21">
+    <meta name="description" content="배열을 활용해서 예제를 풀어보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>성적계산 프로그램</title>
+</head>
+
+<body>
+    <fieldset>
+        <legend>성적계산</legend>
+        <input type="text" id="score" placeholder="정수만 입력!" /><br /><br />
+        <input type="button" value="입력" onclick="input()">
+        <input type="button" value="출력" onclick="output()">
+        <input type="button" value="총점" onclick="total()">
+        <h3>총점은 <span id="sum">0</span>점 입니다.</h3>
+    </fieldset>
+</body>
+
+<script>
+    let arr = [];   // 배열선언
+    let idx = 0;    // 인덱스번호
+
+    function input() {
+        let score = document.getElementById("score");
+        let score1 = parseInt(score.value);
+
+        arr[idx] = score1;
+
+        idx++;  //input()함수를 실행시킬 때마다 index번호가 1씩 증가한다. (배열의 크기가 1증가)    
+
+        console.log(arr);
+
+        score.value="";     // 입력 버튼을 눌렀을 떄 입력창에 작성한 것이 초기화 된다.
+        score.focus();      // 초점이 입력창에 향하도록 한다.
+    }
+
+    function output() {
+        for (let i in arr) {
+            console.log("arr["+i+"] : "+arr[i]);
+        }
+        
+    }
+
+    function total() {
+        let sum1 = 0;
+        for (let i in arr) {
+            sum1 += arr[i];
+        }
+        
+        sum.innerHTML = sum1;
+    }
+</script>
+
+</html>

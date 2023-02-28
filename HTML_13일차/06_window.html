@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.04">
+    <meta name="description" content="원도우 창을 만들어보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>window창</title>
+</head>
+<body>
+    <button>창열기</button>
+    <button>창닫기</button>
+    <button>창크기 변경1</button>
+    <button>창크기 변경2</button>
+    <button>창크기 변경3</button>
+</body>
+
+<script>
+    let btn = document.getElementsByTagName("button")
+    let myWindow;
+
+    btn[0].addEventListener("click", function(){
+        myWindow = window.open("", "myWindow", "width=500, height=800");
+        // window.open("URL", "TITLE", "OPTION")
+    });
+
+    btn[1].addEventListener("click", function(){
+        myWindow.close();
+    });
+
+    btn[2].addEventListener("click", function(){
+        myWindow.resizeTo(1000, 1000);    // resizeTo : 고정 크기로 변경
+    });
+
+    btn[3].addEventListener("click", function(){
+        myWindow.resizeBy(100, 100);    // resizeBy : 값만큼 크기 증가, 감소
+    });
+
+    btn[4].addEventListener("click", function(){
+        myWindow.resizeBy(-100, -100);
+    });
+</script>
+</html>

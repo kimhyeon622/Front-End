@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.14">
+    <meta name="description" content="html 컬러의 종류에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>HTML COLOR</title>
+    <style>
+        div {
+            width: 400px;
+            height: 100px;
+            line-height: 100px;
+            display: inline-block;
+            text-align: center;
+            margin: 15px;
+            color: white;
+        }
+
+        p {
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+            margin: 15px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>컬러의 종류</h1>
+
+    <h2>HTML은 140개의 컬러이름을 지원한다.</h2>
+    <div style="background-color: tomato;">Tomato</div>
+    <div style="background-color: orange;">Orange</div>
+    <div style="background-color: dodgerblue;">DodgerBlue</div>
+    <div style="background-color: mediumaquamarine;">MediumSeaGreen</div>
+    <div style="background-color: gray;">Grey</div>
+    <div style="background-color: slateblue;">SlateBlue</div>
+    <div style="background-color: violet;">Violet</div>
+    <div style="background-color: lightgray;">LightGrey</div>
+
+    <a href="http://www.w3schools.com">w3schools 사이트</a><br /><br />
+
+    <h2>HTML의 color는 RGB(Red, Green, Blue)를 사용하는 빛의 삼원색</h2>
+    <p style="background-color: red;">Color Name</p>
+    <p style="background-color: rgb(255,0,0);">rgb(255,0,0)</p>
+    <!-- 0부터 255까지 총 256가지 색상을 조합해서 만든다. -->
+   
+    <p style="background-color: #FF0000;">#Number(16진수)</p>
+    
+    <h2>HTML 색상의 알파값 추가</h2>
+    <p style="background-color: rgb(0,150,0);">rgb(0,150,0)</p>
+    <p style="background-color: rgba(0,150,0,0.7);">rgba(0,150,0,0.7)</p>
+    <p style="background-color: rgba(0,150,0,0.4);">rgba(0,150,0,0.4)</p>
+    <p style="background-color: rgba(0,150,0,0.1);">rgba(0,150,0,0.1)</p>
+    <!-- 알파값은 0부터 1까지 -->
+
+    <h2>HSLA로 색상표현하기</h2>
+    <p style="background-color: hsl(0, 100%, 50%, 0.1);">RED</p>
+    <p style="background-color: hsl(120, 100%, 50%, 0.5);">GREEN</p>
+    <p style="background-color: hsl(240, 100%, 50%, 1);">BLUE</p>
+    <!-- H : 색조(Hue) -->
+    <!-- S : 채도(Saturation) -->
+    <!-- L : 밝기(Lightness/ Luminance) -->
+
+</body>
+
+</html>

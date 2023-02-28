@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.10.05">
+    <meta name="description" content="setInterval과 setTimeout을 활용한 예제">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>Timing예제</title>
+</head>
+
+<body>
+    <!-- 
+        [1] 페이지가 로딩 될때 : 5초 후에 Daum 페이지로 이동합니다.
+        [2] 5초에서 1초씩 줄어들고 0초가 되면 "페이지를 이동합니다."라는 알림창
+        [3] Daum 홈페이지로 이동
+     -->
+
+    <h1><b id="time">5</b>초 후에 Daum페이지로 이동합니다</h1>
+</body>
+
+<script>
+    let result = document.getElementById("time");
+
+    let myTime;
+    let x = 5;
+
+
+    myTime = setInterval(function () {
+        if (x > 0) {
+            x--;
+            result.innerHTML = x;
+        } else {
+            clearInterval(myTime);
+            alert('페이지를 이동합니다');
+            location.href = "http://www.daum.net";
+        }
+    }, 1000);
+
+    
+
+</script>
+
+</html>

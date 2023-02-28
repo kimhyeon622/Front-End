@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.20">
+    <meta name="description" content="계산기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>계산기</title>
+</head>
+
+<body>
+    <!-- div를 활용하여 계산기 프로그램 만들기 -->
+    <div id="wrap">
+        <div id="re">0</div>
+        <div id="result">0</div>
+
+        <div id="btn">
+            <div class="group">
+                <div id="ac" class="nums" onclick="reset()">AC</div>
+                <div id="enter" class="nums" onclick="operation()">Enter</div>
+            </div>
+
+            <div class="group">
+                <div class="num" onclick="btn(7)">7</div>
+                <div class="num" onclick="btn(8)">8</div>
+                <div class="num" onclick="btn(9)">9</div>
+                <div class="oper" onclick="btn('+')">+</div>
+            </div>
+
+            <div class="group">
+                <div class="num" onclick="btn(4)">4</div>
+                <div class="num" onclick="btn(5)">5</div>
+                <div class="num" onclick="btn(6)">6</div>
+                <div class="oper" onclick="btn('-')">-</div>
+            </div>
+
+            <div class="group">
+                <div class="num" onclick="btn(1)">1</div>
+                <div class="num" onclick="btn(2)">2</div>
+                <div class="num" onclick="btn(3)">3</div>
+                <div class="oper" onclick="btn('*')">X</div>
+            </div>
+
+            <div class="group">
+                <div id="num0" class="nums" onclick="btn(0)">0</div>
+                <div class="num" onclick="btn('.')">.</div>
+                <div class="oper" onclick="btn('/')">÷</div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+
+    let text = "";
+    let re= document.getElementById("re");
+    let result = document.getElementById("result");
+
+    function btn(x) {
+
+        text += x;
+        result.innerHTML = text;
+
+    }
+
+    function reset() {
+        text = "";      // 초기화
+        result.innerHTML = "0";
+    }
+
+    function operation() {
+
+        let re1 = (text)+('='); 
+        re.innerHTML = re1;
+        let result1 = eval(text); // eval() : 매개변수 안에 있는 문자열을 계산하여 출력
+        result.innerHTML = result1;
+        text = "";
+
+    }
+
+
+</script>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.20">
+    <meta name="description" content="중첩for문 두번쨰 예제">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>짝수단, 홀수단, 구구단</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+    // if문과 for문을 사용해서 구구단의 짝수단을 출력하시오
+    // 2, 4, 6, 8단
+
+    // contine문 사용!
+    // contine문
+    // [1] 반복문과 함께 사용
+    // [2] 반복문에서 contine문을 만나면 이후 문장을 실행하지 않고
+    // [3] for문의 증감식(4번)으로 이동한다.
+    
+    
+    for(let i=2; i <= 9; i++){
+        if(i%2 != 0){
+        continue;
+    }
+        document.write("구구단 "+i+"단<br/>")
+        for(let j=1; j<= 9; j++){
+            document.write(i+"x"+j+"="+(i*j)+"<br/>")
+        }document.write("<br/>")
+    }document.write("<br/>")
+
+</script>
+</html>

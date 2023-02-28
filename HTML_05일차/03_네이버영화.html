@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.13">
+    <meta name="description" content="네이버 영화를 참고해서 테이블 만들기">
+
+    <style>
+        caption{
+            font-size: 30px;
+            font-weight: bold;
+            margin: 10px 0px 10px 0px;
+        }
+
+        table{
+            width: 50%;
+            border-collapse: collapse;
+        }
+
+        td,
+        tr,
+        th {
+            border-collapse: collapse;
+            border: 1px solid black;
+            width: 150px;
+            padding: 10px;
+        }
+
+        .center1{
+            text-align: center;
+        }
+
+    </style>
+
+    <title>네이버 영화</title>
+</head>
+
+<body>
+
+    <table>
+
+        <caption>현재 상영중인 영화정보</caption>
+
+        <thead>
+            <tr>
+                <th rowspan="2">구분</th>
+                <th colspan="4">영화정보</th>
+            </tr>
+
+            <tr>
+                <th>영화 제목</th>
+                <th>세부 정보</th>
+                <th>등급</th>
+                <th>상영 시간</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td rowspan="3" class="center1">
+                    <a href="https://movie.naver.com/movie/bi/mi/basic.naver?code=202465">
+                        <img src="https://movie-phinf.pstatic.net/20220907_295/1662518947849s9ym1_JPEG/movie_image.jpg?type=f125" alt="블랙폰"
+                            width="100px" />
+                    </a>
+                </td>
+            <td rowspan="3">블랙폰</td>
+            <td>공포, 스릴러</td> 
+            <td rowspan="3">15세 관람가</td>
+            <td rowspan="3" class="center1">103분</td>  
+            <tr>
+            <td>미국</td> 
+            </tr>
+            <tr>
+            <td>2022.09.07 개봉</td> 
+            </tr>
+            
+                </tr>
+                <tr>
+                <td rowspan="3" class="center1">
+                    <a href="https://movie.naver.com/movie/bi/mi/basic.naver?code=201641">
+                        <img src="https://movie-phinf.pstatic.net/20220826_188/1661489945659Su2RI_JPEG/movie_image.jpg?type=m203_290_2" alt="공조2"
+                            width="100px" />
+                    </a>
+                </td>
+                <td rowspan="3">공조2 : 인터내셔날</td>  
+                <td>액션, 코미디</td>
+                <td rowspan="3">15세 관람가</td>
+                <td rowspan="3" class="center1">129분</td>  
+                </tr>
+                <tr>
+                <td>한국</td>
+                </tr>
+                <tr>
+                <td>2022.09.07 개봉</td>
+                
+                </tr>
+            
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <th>출처</th>
+                <th colspan="4"><a href="https://movie.naver.com/">네이버 영화정보</a></th>
+            </tr>
+        </tfoot>
+    </table>
+
+</body>
+
+</html>

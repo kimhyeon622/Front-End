@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.15">
+    <meta name="description" content="선택지(selector)를 통해 스타일의 우선순위에 대해 알아보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <title>선택지(Selector)</title>
+</head>
+<body>
+    <h1>h1은 무슨 색?</h1>
+    <!-- h1은 따로 스타일을 지정해주지 않고
+        부모요소인 body태그의 style을 따라간다 -->
+
+    <h2>h2은 무슨 색?</h2>  
+    <!-- h2는 css에서 정해준 style을 따라간다
+         body보다 우선순위가 높다 -->
+
+    <h2 class="ex">h2 class="ex"는 무슨 색?</h2>
+
+    <p class="ex">p class="ex"는 무슨 색?</p>
+</body>
+</html>

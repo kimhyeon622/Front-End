@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.20">
+    <meta name="description" content="함수를 활용한 계산기 만들기">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>계산기(Calculator)</title>
+</head>
+<body>
+    <fieldset>
+        <legend>계산기</legend>
+        <input type="text" id="input1" placeholder="첫번쨰 숫자입력"><br/>
+        <input type="text" id="input2" placeholder="두번쨰 숫자입력"><br/>
+        <input type="button" value="+" onclick="sum()">
+        <input type="button" value="-" onclick="set()">
+        <input type="button" value="*" onclick="multi()">
+        <input type="button" value="/" onclick="divide()">
+        <input type="button" value="C" onclick="reset()">
+        <div id="result">0</div>
+    </fieldset>    
+</body>
+
+<script>
+    // 스크립트는 페이지가 처음 로딩될 떄 실행
+    // 함수 호출 될떄 실행
+
+    let result = document.getElementById("result");
+
+    // Number() : 입력한 값을 숫자 그대로 변환
+    // parseInt() : 입력한 값을 정수로 변환
+    let num1;
+    let num2;
+    let value;
+
+    function insert(){
+        num1 = Number(document.getElementById("input1").value);
+        num2 = Number(document.getElementById("input2").value);
+    }
+
+    function sum() {
+        insert();   // insert()함수 호출(실행);
+        result.innerHTML = num1 + num2;
+    }
+
+    function minus() {
+        insert();
+        result.innerHTML = num1 - num2;
+    }
+
+    function multi() {
+        insert();
+        result.innerHTML = num1 * num2;
+    }
+
+    function divide() {
+        insert();
+        if (num2 == 0){
+            num2 = 1;
+        }
+        result.innerHTML = num1 / num2;
+
+    }
+
+    function reset() {
+        document.getElementById("input1").value="";
+        document.getElementById("input2").value="";
+        result.innerHTML="0";
+    }
+</script>
+</html>

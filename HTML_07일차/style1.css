@@ -1,0 +1,20 @@
+/* ol과 ul태그의 색을 바꾼다 */
+ol, ul  {
+    color: orange;
+}
+
+/* 부모태그 ul에서 자식태그 li의 색을 바꾼다 */
+ul>li{
+    color: blue;
+}
+
+.ol2 li{
+    color: red;
+}
+
+#ol1 li{
+    color: green;
+}
+
+
+

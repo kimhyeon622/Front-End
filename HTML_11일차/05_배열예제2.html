@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.21">
+    <meta name="description" content="배열을 활용한 성적계산 프로그램">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>성적프로그램2</title>
+</head>
+<body>
+    <fieldset>
+        <legend>성적계산(Class활용)</legend>
+        <input type="text" class="score" placeholder="1번학생 점수"><br/>
+        <input type="text" class="score" placeholder="2번학생 점수"><br/>
+        <input type="text" class="score" placeholder="3번학생 점수"><br/>
+        <input type="button" value="성적계산" onclick="scores()">
+    </fieldset>
+</body>
+
+<script>
+
+    function scores() {
+        let score = document.getElementsByClassName("score");
+
+        // 콘솔창에서 score의 타입과 배열여부 출력하기!
+        console.log("타입 : "+typeof(score))        
+        console.log("배열여부 : "+Array.isArray(score))  
+        console.log(score)     
+        
+        let sum = 0;
+
+        sum = parseInt(score[0].value) + parseInt(score[1].value) + parseInt(score[2].value)
+        
+        console.log("총점 : " + sum)
+        console.log("평균 : " + sum/3)
+    }
+</script>
+</html>

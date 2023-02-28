@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="kimhyeon">
+    <meta name="date" content="2022.09.15">
+    <meta name="description" content="구글, 네이버, 다음 검색을 사용해보자">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>검색</title>
+</head>
+<body>
+    <!-- form태그 안에 fieldset 만들기 -->
+    <!-- fieldset안에 input태그 type="text"와 type="submit"(검색) 만들기 -->
+    <form action="http://google.com/search" method="get">
+        <fieldset>
+            <legend>구글 검색</legend>
+            <input type="text" name="q">
+            <input type="submit" value="검색">
+        </fieldset>
+    </form>
+
+    <form action="http://search.naver.com/search.naver" method="get">
+        <fieldset>
+            <legend>네이버 검색</legend>
+            <input type="text" name="query">
+            <input type="submit" value="검색">
+        </fieldset>
+    </form>
+
+    <form action="http://search.daum.net/search" method="get">
+        <fieldset>
+            <legend>다음 검색</legend>
+            <input type="text" name="q">
+            <input type="submit" value="검색">
+        </fieldset>
+    </form>
+
+</body>
+</html>
